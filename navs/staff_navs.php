@@ -246,18 +246,33 @@ if(isset($_SESSION['username'])){
    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
 
      <?php
-     $sql="SELECT * FROM add_services WHERE Services='PWD Services'";
-     $sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
+//$sql="SELECT * FROM add_services WHERE Services='PWD Services'";
+//$sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
 
-     $result=mysqli_query($conn, $sql);
-     $result2=mysqli_query($conn, $sql2);
+//$result=mysqli_query($conn, $sql);
+//$result2=mysqli_query($conn, $sql2);
 
-     $row=mysqli_fetch_assoc($result);
-       $serv=$row['Services'];
-       echo '<a href="steps_pwd_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
-     $row=mysqli_fetch_assoc($result2);
-       $serv=$row['Services'];
-       echo '<a href="seniors_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result);
+//  $serv=$row['Services'];
+//  echo '<a href="steps_pwd_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result2);
+//  $serv=$row['Services'];
+//  echo '<a href="seniors_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+
+              $sql="SELECT * FROM add_services";
+              $result=mysqli_query($conn, $sql);
+              while($row=mysqli_fetch_assoc($result)){
+                $serv=$row['Services'];
+
+                  if ($serv=='PWD Services') {
+                    echo '<a href="steps_pwd_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                  }elseif($serv=='Senior Citizen Services') {
+                    echo '<a href="seniors_staff.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                  }else {
+                    echo '<a href="#" class="w3-bar-item w3-button" disabled>'.$serv.'</a>';
+                  }
+
+                }
       ?>
 
    </div><br>
@@ -281,20 +296,69 @@ if(isset($_SESSION['username'])){
   <div id="Demo5" class="w3-dropdown-content w3-bar-block w3-border">
        <a href="applicants_pwd.php" class="w3-bar-item w3-button">PWD Applicants</a>
        <a href="senior_applicants.php" class="w3-bar-item w3-button">Senior Citizen Applicants</a>
+
+       <?php
+
+                $sql="SELECT * FROM add_services";
+                $result=mysqli_query($conn, $sql);
+                while($row=mysqli_fetch_assoc($result)){
+                  $serv=$row['Services'];
+
+                    if ($serv=='PWD Services') {
+                      echo '<a href="applicants_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }elseif($serv=='Senior Citizen Services') {
+                      echo '<a href="senior_applicants.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }else {
+                      echo '<a href="#" class="w3-bar-item w3-button" disabled>'.$serv.'</a>';
+                    }
+
+                  }
+        ?>
   </div><br>
 
     <button onclick="myFunctions()" class="w3-button">
     <img src="https://img.icons8.com/dusk/30/000000/add-user-group-man-woman.png"> APPROVED APPLICANTS</button>
      <div id="Demos" class="w3-dropdown-content w3-bar-block w3-border">
-       <a href="applicants_pwd_approved.php" class="w3-bar-item w3-button">PWD Approved</a>
-       <a href="senior_applicants_approved.php" class="w3-bar-item w3-button">Senior Citizen Approved</a>
+
+       <?php
+
+                $sql="SELECT * FROM add_services";
+                $result=mysqli_query($conn, $sql);
+                while($row=mysqli_fetch_assoc($result)){
+                  $serv=$row['Services'];
+
+                    if ($serv=='PWD Services') {
+                      echo '<a href="applicants_pwd_approved.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }elseif($serv=='Senior Citizen Services') {
+                      echo '<a href="senior_applicants_approved.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }else {
+                      echo '<a href="#" class="w3-bar-item w3-button" disabled>'.$serv.'</a>';
+                    }
+
+                  }
+        ?>
      </div><br>
 
      <button onclick="myFunction3()" class="w3-button">
      <img src="https://img.icons8.com/dusk/30/000000/add-user-group-man-woman.png"> DISAPPROVED APPLICANTS</button>
       <div id="Demo3" class="w3-dropdown-content w3-bar-block w3-border">
-        <a href="applicants_pwd_disapproved.php" class="w3-bar-item w3-button">PWD Disapproved</a>
-        <a href="senior_applicants_disapproved.php" class="w3-bar-item w3-button">Senior Citizen Disapproved</a>
+        <?php
+
+                 $sql="SELECT * FROM add_services";
+                 $result=mysqli_query($conn, $sql);
+                 while($row=mysqli_fetch_assoc($result)){
+                   $serv=$row['Services'];
+
+                     if ($serv=='PWD Services') {
+                       echo '<a href="applicants_pwd_disapproved.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                     }elseif($serv=='Senior Citizen Services') {
+                       echo '<a href="senior_applicants_disapproved.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                     }else {
+                       echo '<a href="#" class="w3-bar-item w3-button" disabled>'.$serv.'</a>';
+                     }
+
+                   }
+         ?>
       </div>
       <br>
       <a href="contact_us_staff.php" class="w3-bar-item w3-button">

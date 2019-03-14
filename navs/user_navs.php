@@ -136,19 +136,35 @@ if(isset($_SESSION['username'])){
    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
 
      <?php
-     $sql="SELECT * FROM add_services WHERE Services='PWD Services'";
-     $sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
+//$sql="SELECT * FROM add_services WHERE Services='PWD Services'";
+//$sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
 
-     $result=mysqli_query($conn, $sql);
-     $result2=mysqli_query($conn, $sql2);
+//$result=mysqli_query($conn, $sql);
+//$result2=mysqli_query($conn, $sql2);
 
-     $row=mysqli_fetch_assoc($result);
-       $serv=$row['Services'];
-       echo '<a href="steps_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
-     $row=mysqli_fetch_assoc($result2);
-       $serv=$row['Services'];
-       echo '<a href="seniors.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result);
+  //$serv=$row['Services'];
+  //echo '<a href="steps_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result2);
+  //$serv=$row['Services'];
+  //echo '<a href="seniors.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+
+       $sql="SELECT * FROM add_services";
+       $result=mysqli_query($conn, $sql);
+       while($row=mysqli_fetch_assoc($result)){
+          $serv=$row['Services'];
+
+            if ($serv=='PWD Services') {
+              echo '<a href="steps_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+            }elseif($serv=='Senior Citizen Services') {
+              echo '<a href="seniors.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+            }else {
+              echo '<a href="#" class="w3-bar-item w3-button">'.$serv.'</a>';
+            }
+
+     }
       ?>
+
 
    </div><br>
    <button onclick="myFunctions()" class="w3-button">
@@ -164,18 +180,35 @@ if(isset($_SESSION['username'])){
       $id = $row['user_id'];
       }
 
-      $sql="SELECT * FROM add_services WHERE Services='PWD Services'";
-      $sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
+//$sql="SELECT * FROM add_services WHERE Services='PWD Services'";
+//$sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
 
-      $result=mysqli_query($conn, $sql);
-      $result2=mysqli_query($conn, $sql2);
+//$result=mysqli_query($conn, $sql);
+//$result2=mysqli_query($conn, $sql2);
 
-      $row=mysqli_fetch_assoc($result);
-        $serv=$row['Services'];
-        echo '<a href="steps_pwd_submitted.php?submitted='.$id.'" class="w3-bar-item w3-button">'.$serv.'</a>';
-      $row=mysqli_fetch_assoc($result2);
-        $serv=$row['Services'];
-        echo '<a href="seniors_submitted.php?submitted='.$id.'"" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result);
+//  $serv=$row['Services'];
+//  echo '<a href="steps_pwd_submitted.php?submitted='.$id.'" class="w3-bar-item w3-button">'.$serv.'</a>';
+//$row=mysqli_fetch_assoc($result2);
+//  $serv=$row['Services'];
+//  echo '<a href="seniors_submitted.php?submitted='.$id.'"" class="w3-bar-item w3-button">'.$serv.'</a>';
+
+
+        $sql="SELECT * FROM add_services";
+        $result=mysqli_query($conn, $sql);
+        while($row=mysqli_fetch_assoc($result)){
+           $serv=$row['Services'];
+
+             if ($serv=='PWD Services') {
+               echo '<a href="steps_pwd_submitted.php?submitted='.$id.'" class="w3-bar-item w3-button">'.$serv.'</a>';
+             }elseif($serv=='Senior Citizen Services') {
+               echo '<a href="seniors_submitted.php?submitted='.$id.'"" class="w3-bar-item w3-button">'.$serv.'</a>';
+             }else {
+               echo '<a href="#" class="w3-bar-item w3-button">'.$serv.'</a>';
+             }
+
+       }
+
        ?>
 
     </div><br>
