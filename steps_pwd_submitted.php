@@ -60,48 +60,11 @@
     }
 //------------------------------------------------Update-----------------------------------
 
-$userid = '';
-$Pwd_Num = '';
-$lname = '';
-$fname = '';
-$mname = '';
-$Civil_Status = '';
-$Gender = '';
-$Cnumber1= '';
-$Cnumber= '';
-$Contactnumber = '';
-$age = '';
-$bday = '';
-$bplace = '';
-$address = '';
-$datefill = '';
-$Com_Reg = '';
-$Pwd_Num = '';
-$Type_disability = '';
-$Inbo_conge = '';
-$If_ill = '';
-$yr_cause = '';
-$HEA = '';
-$HEA1= '';
-$hea='';
 $LIVING = '';
-$LIVING1 = '';
-$occupation = '';
-$occupation1 = '';
-$Occupation = '';
-$SOURCE = '';
-$SOURCE1 = '';
-$MONTHLY = '';
-$SKILLS= '';
 $PROBorNEEDS_Economics = '';
-$PROBorNEEDS_Economics1 = '';
 $PROBorNEEDS_Social = '';
-$PROBorNEEDS_Social1 = '';
 $PROBorNEEDS_Health = '';
-$PROBorNEEDS_Health1 = '';
 $PROBorNEEDS_Housing = '';
-$PROBorNEEDS_Housing1 = '';
-$Comm_Serv = '';
 
 
   if (isset($_POST['update'])) {
