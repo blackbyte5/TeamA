@@ -294,8 +294,6 @@ if(isset($_SESSION['username'])){
    <button onclick="myFunction5()" class="w3-button">
   <img src="https://img.icons8.com/dusk/30/000000/add-user-group-man-woman.png"> APPLICANTS</button>
   <div id="Demo5" class="w3-dropdown-content w3-bar-block w3-border">
-       <a href="applicants_pwd.php" class="w3-bar-item w3-button">PWD Applicants</a>
-       <a href="senior_applicants.php" class="w3-bar-item w3-button">Senior Citizen Applicants</a>
 
        <?php
 
