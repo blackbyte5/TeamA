@@ -14,7 +14,7 @@ include 'navs/admin_navs.php';
       if (isset($_GET['edit'])) {
         $id = $_GET['edit'];
 
-        $sql = "SELECT * FROM Announcements WHERE Announce_id=".$id;
+        $sql = "SELECT * FROM announcements WHERE Announce_id=".$id;
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
 

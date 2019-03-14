@@ -27,7 +27,7 @@ if(isset($_SESSION['username'])){
             echo "What's your Announcements";
           }
           else {
-            $sql = "INSERT INTO Announcements (user_staff_id, Name_Publisher, Date_Announce, Announcement)
+            $sql = "INSERT INTO announcements (user_staff_id, Name_Publisher, Date_Announce, Announcement)
             VALUES ('$admin_id', '$name', '$date', '$announce')";
             $result = mysqli_query($conn, $sql);
             header("Refresh:1; url=announcements_admin.php");
