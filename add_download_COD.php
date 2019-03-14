@@ -17,7 +17,7 @@ include 'navs/admin_navs.php';
      if (isset($_POST['add'])) {
 
        if (!empty($_FILES['pdf_file']['name'])) {
-       $targetDir = 'https://github.com/blackbyte5/TeamA/downloadable';
+       $targetDir = Git::open('downloadable');
        $Requirements=basename($_FILES['pdf_file']['name']);
        $targetFilePath = $targetDir . $Requirements;
        $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
