@@ -26,28 +26,7 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 /* Above line is to import google font style */
 
-.others{
-display:none;
-background-color: #F7F7F7; /* Black w/opacity/see-through */
-color: black;
-border-radius: 10px;
-margin: 100px auto;
-font-family: Raleway;
-padding: 50px;
-width: 60%;
-min-width: 300px;
-}
-#first{
-display:block;
-background-color: #F7F7F7; /* Black w/opacity/see-through */
-color: black;
-border-radius: 10px;
-margin: 100px auto;
-font-family: Raleway;
-padding: 50px;
-width: 60%;
-min-width: 300px;
-}
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
