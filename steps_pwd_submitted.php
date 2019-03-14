@@ -284,7 +284,7 @@ else {
     </div><br><br>
     <ol>
       <?php
-      $sql = "SELECT * FROM add_senior_requirements ORDER BY id ASC";
+      $sql = "SELECT * FROM add_pwd_requirements ORDER BY id ASC";
       $sql1 = "SELECT * FROM add_steps";
       $result = mysqli_query($conn, $sql);
       $result1 = mysqli_query($conn, $sql1);
