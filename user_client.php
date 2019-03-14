@@ -7,10 +7,12 @@
       unset ($_SESSION['Success']);
     }
     ?>
+  <p>dsjklfsdfksdkhfsdfjdfsjhhhhhhhhhhhhh</p>
 </div>
     <div class="container-fluid"><br><br>
+
             <?php
-            $sql = "SELECT * FROM Announcements ORDER BY Announce_id DESC";
+            $sql = "SELECT * FROM announcements ORDER BY Announce_id DESC";
             $result = mysqli_query($conn, $sql);
             mysqli_num_rows($result);
             while($row = mysqli_fetch_assoc($result)){
@@ -32,19 +34,7 @@
     </div>
     </div>
 
-<script>
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("mySidebar").style.width = "25%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
-}
-</script>
+
 
 </body>
 </html>
