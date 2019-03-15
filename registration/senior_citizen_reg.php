@@ -120,6 +120,10 @@
           echo (mysqli_error($conn))."Fill-up all required fields in first page <a style='color:black;'>( * )</a> <br>or<br> Attach your Requirements..";
         }
 
+        elseif (empty($userid)) {
+          echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not loging in deffirent account";
+        }
+
         elseif (empty($HEA) || empty($occupation) || empty($SOURCE) || empty($MONTHLY)|| empty($SKILLS) || empty($Comm_Serv)) {
 
           echo (mysqli_error($conn))."Fill-up all required fields in second page <a style='color:black;'>( * )</a>";

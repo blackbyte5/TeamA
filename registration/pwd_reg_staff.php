@@ -134,6 +134,9 @@
 
         }
 
+        elseif (empty($userid)) {
+          echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not loging in deffirent account";
+        }
 
         else{
 
