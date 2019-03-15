@@ -36,28 +36,10 @@
       box-sizing: border-box;
     }
 
-    .bg-image {
-      /* The image used */
-      background-image: url("others/cebu.jpg");
-
-      /* Add the blur effect */
-      filter: blur(5px);
-      -webkit-filter: blur(1px);
-
-      /* Full height */
-      height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
     /* Position text in the middle of the page/image */
     .bg-text {
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
-      color: white;
+      background-color: white; /* Black w/opacity/see-through */
+      color: Black;
       font-weight: bold;
       border-radius: 10px 10px 10px 10px;
       border: 1px solid #f1f1f1;
@@ -68,7 +50,7 @@
       z-index: 2;
       width: 55%;
       padding: 25px;
-      box-shadow: 0 4px 9px 5px rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(2, 0, 0, 0.19);
+      box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.8);
     }
 
     input{
@@ -82,7 +64,7 @@
     <form method="POST" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>">
       <div class="bg-text">
         <center>
-        <img src="others/dsws.png" height="75" width="85">
+        <img src="others/dsws.png" height="95" width="95">
         <h1><i>Sign Up</i></h1>
         </center>
       <div class="error">

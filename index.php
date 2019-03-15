@@ -36,29 +36,13 @@
       box-sizing: border-box;
     }
 
-    .bg-image {
-      /* The image used */
-      background-image: url("others/cebu.jpg");
 
-
-      /* Add the blur effect */
-      filter: blur(5px);
-      -webkit-filter: blur(1px);
-
-      /* Full height */
-      height: 100%;
-
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
 
     /* Position text in the middle of the page/image */
     .bg-text {
-      background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.7); /* Black w/opacity/see-through */
-      color: white;
+
+      background-color: white; /* Black w/opacity/see-through */
+      color: Black;
       font-weight: bold;
       border-radius: 10px 10px 10px 10px;
       border: 1px solid #f1f1f1;
