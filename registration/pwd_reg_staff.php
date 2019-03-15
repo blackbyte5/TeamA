@@ -598,7 +598,7 @@
          <input type="text" class="form-control"  name="PROBorNEEDS_Housing1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Housing1;?>"><br><br>
 
         <a style="color:red">*</a><br>
-        <select class="form-control" name="Comm_Serv">
+        <select class="form-control" name="Comm_Serv[]">
           <option value="">COMMUNITY SERVICE</option>
           <?php
           $sql = "SELECT * FROM add_community_serv";
