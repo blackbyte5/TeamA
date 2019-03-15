@@ -220,7 +220,7 @@
 
         if(isset($_SESSION['username'])){
         $username = $_SESSION['username'];
-        $sql = "SELECT * FROM user_client WHERE (Email = '$username' OR Username = '$username')";
+        $sql = "SELECT * FROM user_staff WHERE (Email = '$username' OR Username = '$username')";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $id = $row['user_id'];
