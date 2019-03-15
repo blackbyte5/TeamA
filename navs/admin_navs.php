@@ -244,20 +244,24 @@ if(isset($_SESSION['username'])){
    <button onclick="myFunction1()" class="w3-button">
    <img src="https://img.icons8.com/ultraviolet/30/000000/administrative-tools.png"> Requirements Maintenance</button>
     <div id="Demo1" class="w3-dropdown-content w3-bar-block w3-border">
-      <?php
-      $sql="SELECT * FROM add_services WHERE Services='PWD Services'";
-      $sql2="SELECT * FROM add_services WHERE Services='Senior Citizen Services'";
+    
+       <?php
 
-      $result=mysqli_query($conn, $sql);
-      $result2=mysqli_query($conn, $sql2);
+                $sql="SELECT * FROM add_services";
+                $result=mysqli_query($conn, $sql);
+                while($row=mysqli_fetch_assoc($result)){
+                  $serv=$row['Services'];
 
-      $row=mysqli_fetch_assoc($result);
-        $serv=$row['Services'];
-        echo '<a href="add_req_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
-      $row=mysqli_fetch_assoc($result2);
-        $serv=$row['Services'];
-        echo '<a href="add_req_senior.php" class="w3-bar-item w3-button">'.$serv.'</a>';
-       ?>
+                    if ($serv=='PWD Services') {
+                      echo '<a href="add_req_pwd.php" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }elseif($serv=='Senior Citizen Services') {
+                      echo '<a href="add_req_senior" class="w3-bar-item w3-button">'.$serv.'</a>';
+                    }else {
+                      echo '<a href="#" class="w3-bar-item w3-button" disabled>'.$serv.'</a>';
+                    }
+
+                  }
+        ?>
     </div><br><br>
 
    <button onclick="myFunction5()" class="w3-button">
