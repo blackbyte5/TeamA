@@ -132,7 +132,7 @@
       echo (mysqli_error($conn))."Fill-up all required fields <a style='color:black;'>( * )</a> <br>or<br> Attach your Requirements..";
     }
     elseif (empty($userid)) {
-      echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not loging in deffirent account";
+      echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not login deffirent account";
     }
 
     elseif ($age < 60){
