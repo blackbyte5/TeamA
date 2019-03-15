@@ -7,21 +7,17 @@
     <h2 class="title">PWD Requirements</h2>
     <div class="error">
       <?php
-      $userid = '';
       $Pwd_Num = '';
       $lname = '';
       $fname = '';
       $mname = '';
       $Civil_Status = '';
       $Gender = '';
-      $Cnumber1= '';
       $Cnumber= '';
-      $Contactnumber = '';
       $age = '';
       $bday = '';
       $bplace = '';
       $address = '';
-      $datefill = '';
       $Com_Reg = '';
       $Pwd_Num = '';
       $Type_disability = '';
@@ -30,12 +26,10 @@
       $yr_cause = '';
       $HEA = '';
       $HEA1= '';
-      $hea='';
       $LIVING = '';
       $LIVING1 = '';
       $occupation = '';
       $occupation1 = '';
-      $Occupation = '';
       $SOURCE = '';
       $SOURCE1 = '';
       $MONTHLY = '';
@@ -184,21 +178,17 @@
                           echo (mysqli_error($conn));
                         }else {
                           echo (mysqli_error($conn))."Data Submit Successfully";
-                          $userid = '';
                           $Pwd_Num = '';
                           $lname = '';
                           $fname = '';
                           $mname = '';
                           $Civil_Status = '';
                           $Gender = '';
-                          $Cnumber1= '';
                           $Cnumber= '';
-                          $Contactnumber = '';
                           $age = '';
                           $bday = '';
                           $bplace = '';
                           $address = '';
-                          $datefill = '';
                           $Com_Reg = '';
                           $Pwd_Num = '';
                           $Type_disability = '';
@@ -207,12 +197,10 @@
                           $yr_cause = '';
                           $HEA = '';
                           $HEA1= '';
-                          $hea='';
                           $LIVING = '';
                           $LIVING1 = '';
                           $occupation = '';
                           $occupation1 = '';
-                          $Occupation = '';
                           $SOURCE = '';
                           $SOURCE1 = '';
                           $MONTHLY = '';
@@ -422,7 +410,7 @@
         ?>
 
        <div class="form-inline"><br>
-       <input type="text" class="form-control"  name="LIVING1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)" value="<?php echo $LIVING1;?>"><br>
+       <input type="text" class="form-control"  name="LIVING1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)" value="<?php echo $LIVING1;?>"><br>
      </div><br>
   <div class="form-inline">
     <a style="color:red">*</a><br>
@@ -444,7 +432,7 @@
        }
        ?>
        </select>
-       <input type="text" class="form-control"  name="occupation1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php if ($occupation==$occ){echo $occ;}else {echo $occupation1;}?>"><br>
+       <input type="text" class="form-control"  name="occupation1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php if ($occupation==$occ){echo $occ;}else {echo $occupation1;}?>"><br>
        </div><br>
        <div class="form-inline"><br>
        <a style="color:red">*</a><br>
@@ -464,7 +452,7 @@
         }
        ?>
        </select>
-       <input type="text" class="form-control"  name="SOURCE1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php if ($SOURCE == $source){echo $SOURCE;}else {echo $SOURCE1;}?>"><br>
+       <input type="text" class="form-control"  name="SOURCE1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php if ($SOURCE == $source){echo $SOURCE;}else {echo $SOURCE1;}?>"><br>
        <br><br>
        <a style="color:red">*</a><br>
           <select class="form-control" name="MONTHLY[]" value="<?php echo $MONTHLY;?>">
@@ -545,7 +533,7 @@
        ?>
       </label><br><br>
       <div class="form-inline">
-      <input type="text" class="form-control"  name="PROBorNEEDS_Economics1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Economics1;?>">
+      <input type="text" class="form-control"  name="PROBorNEEDS_Economics1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Economics1;?>">
       </div><br>
 
       <b><Strong><a style="color:red">*</a>Social/Emotional:</b></strong><br><br>
@@ -568,7 +556,7 @@
           ?>
          </label><br><br>
          <div class="form-inline">
-         <input type="text" class="form-control"  name="PROBorNEEDS_Social1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Social1;?>"><br>
+         <input type="text" class="form-control"  name="PROBorNEEDS_Social1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Social1;?>"><br>
           </div><br>
      <b><Strong><a style="color:red">*</a>Health:</b></strong><br><br>
 
@@ -590,7 +578,7 @@
           ?>
          </label><br><br>
          <div class="form-inline">
-         <input type="text" class="form-control"  name="PROBorNEEDS_Health1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Health1;?>"><br><br>
+         <input type="text" class="form-control"  name="PROBorNEEDS_Health1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Health1;?>"><br><br>
        </div>
      <b><strong><a style="color:red">*</a>Housing:</b></strong><br><br>
 
@@ -613,7 +601,7 @@
           ?>
          </label><br><br>
          <div class="form-inline">
-         <input type="text" class="form-control"  name="PROBorNEEDS_Housing1"  placeholder="Others pls. specify" pattern="^[a-zA-Z ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Housing1;?>"><br><br>
+         <input type="text" class="form-control"  name="PROBorNEEDS_Housing1"  placeholder="Others pls. specify" pattern="^[a-zA-Z, ]+$" oninput="if (!this.checkValidity()) this.value = this.value.slice(0, -1)"value="<?php echo $PROBorNEEDS_Housing1;?>"><br><br>
 
         <a style="color:red">*</a><br>
         <select class="form-control" name="Comm_Serv[]">

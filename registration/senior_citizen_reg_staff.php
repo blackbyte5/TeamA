@@ -7,11 +7,36 @@
     <div class="error">
       <?php
 
+      $lname = '';
+      $fname = '';
+      $mname = '';
+      $Civil_Status = '';
+      $Gender = '';
+      $Cnumber= '';
+      $age = '';
+      $bday = '';
+      $bplace = '';
+      $address = '';
+      $Com_Reg = '';
+      $HEA = '';
+      $HEA1= '';
       $LIVING = '';
+      $LIVING1 = '';
+      $occupation = '';
+      $occupation1 = '';
+      $SOURCE = '';
+      $SOURCE1 = '';
+      $MONTHLY = '';
+      $SKILLS= '';
       $PROBorNEEDS_Economics = '';
+      $PROBorNEEDS_Economics1 = '';
       $PROBorNEEDS_Social = '';
+      $PROBorNEEDS_Social1 = '';
       $PROBorNEEDS_Health = '';
+      $PROBorNEEDS_Health1 = '';
       $PROBorNEEDS_Housing = '';
+      $PROBorNEEDS_Housing1 = '';
+      $Comm_Serv =  '';
 
 
         if (isset($_POST['submit'])) {
@@ -133,6 +158,36 @@
                           echo (mysqli_error($conn));
                         }else {
                           echo (mysqli_error($conn))."Data Submit Successfully";
+                          $lname = '';
+                          $fname = '';
+                          $mname = '';
+                          $Civil_Status = '';
+                          $Gender = '';
+                          $Cnumber= '';
+                          $age = '';
+                          $bday = '';
+                          $bplace = '';
+                          $address = '';
+                          $Com_Reg = '';
+                          $HEA = '';
+                          $HEA1= '';
+                          $LIVING = '';
+                          $LIVING1 = '';
+                          $occupation = '';
+                          $occupation1 = '';
+                          $SOURCE = '';
+                          $SOURCE1 = '';
+                          $MONTHLY = '';
+                          $SKILLS= '';
+                          $PROBorNEEDS_Economics = '';
+                          $PROBorNEEDS_Economics1 = '';
+                          $PROBorNEEDS_Social = '';
+                          $PROBorNEEDS_Social1 = '';
+                          $PROBorNEEDS_Health = '';
+                          $PROBorNEEDS_Health1 = '';
+                          $PROBorNEEDS_Housing = '';
+                          $PROBorNEEDS_Housing1 = '';
+                          $Comm_Serv =  '';
                         }
                       }
             }else{
