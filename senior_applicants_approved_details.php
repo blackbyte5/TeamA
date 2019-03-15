@@ -135,7 +135,7 @@
       echo "Invalid age for Senior Citizen";
     }
     elseif (empty($userid)) {
-      echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not loging in deffirent account";
+      echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not login deffirent account";
     }
 else {
 
