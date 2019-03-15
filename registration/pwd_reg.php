@@ -135,7 +135,7 @@
         }
 
         elseif (empty($userid)) {
-          echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not loging in deffirent account";
+          echo (mysqli_error($conn))."Session Timeout <br> Make Sure You're not login deffirent account";
         }
 
         elseif (empty($Type_disability) || empty($age)|| empty($HEA) || empty($occupation) || empty($SOURCE) || empty($MONTHLY)|| empty($SKILLS) || empty($Comm_Serv)) {
