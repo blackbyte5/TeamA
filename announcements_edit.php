@@ -30,7 +30,7 @@
         $date = $_POST['date'];
         $announc = $_POST['announc'];
 
-        $sql = "UPDATE Announcements SET user_staff_id='$staff_id', Name_Publisher='$announce_publish', Date_Announce='$date', Announcement='$announc'
+        $sql = "UPDATE announcements SET user_staff_id='$staff_id', Name_Publisher='$announce_publish', Date_Announce='$date', Announcement='$announc'
                 WHERE Announce_id='$id'";
         $result = mysqli_query($conn, $sql);
 
