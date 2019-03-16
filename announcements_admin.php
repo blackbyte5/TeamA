@@ -61,7 +61,7 @@ if(isset($_SESSION['username'])){
           $row = mysqli_fetch_assoc($result);
           $admin_id = $row['user_id_admin'];
 
-              $sql = "SELECT * FROM Announcements WHERE user_staff_id = '$admin_id' ORDER BY Announce_id DESC";
+              $sql = "SELECT * FROM announcements WHERE user_staff_id = '$admin_id' ORDER BY Announce_id DESC";
               $result = mysqli_query($conn, $sql);
               mysqli_num_rows($result);
               while($row = mysqli_fetch_assoc($result)){
