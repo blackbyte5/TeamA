@@ -32,7 +32,7 @@ include 'navs/admin_navs.php';
         $date = $_POST['date'];
         $announce = $_POST['announce'];
 
-        $sql = "UPDATE Announcements SET user_staff_id='$iduser', Name_Publisher='$announce_publish', Date_Announce='$date', Announcement='$announce'
+        $sql = "UPDATE announcements SET user_staff_id='$iduser', Name_Publisher='$announce_publish', Date_Announce='$date', Announcement='$announce'
                 WHERE Announce_id='$id'";
         $result = mysqli_query($conn, $sql);
         header("Refresh:0; url=announcements_admin.php");
